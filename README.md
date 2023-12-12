@@ -105,9 +105,11 @@ anonimo(1)
 "vai retornar 2"
 
 anonimo=lambda x:10 if x<10 else x"""
+
 "se for mnr que 10 retorna 10 se não retorna o numero"
-#da pra concatenar lambda uma dentro da outra e NÃO TEM RETURN
-#def cabe vaaaaarias linhas 
+
+"""da pra concatenar lambda uma dentro da outra e NÃO TEM RETURN
+def cabe vaaaaarias linhas 
 #em teoria, se tem return é função, se não tem é procedimento, mas as vezes não já que tem os void (não tem retorno), em python sem return é void
 #em python tudo é sempre função, todo subprograma tem retorno, mesmo que seja vazio (ai retorna none)
 #no return vai dizer que a d=função nunca volta (notação maneira)
@@ -120,7 +122,7 @@ anonimo=lambda x:10 if x<10 else x"""
 #inner e closure (rever)
 #rever as corrotinas
 #tem corrotinas classicas e assincronas
-"""o yeld deixa o controle simetrico
+o yeld deixa o controle simetrico
 na corrotina faz uma pausa pro controle simetrico
 existem também os gerados que em python são corrotinas, mas tem quem discorde
 controle simetrico é a troca daquelas respostas ping pong
