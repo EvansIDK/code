@@ -2,8 +2,8 @@
 
 #Testes dos códigos primeiro vídeo
 
-#def soma[T](x:T, y; T) -> T:
-    #return x+y
+"""def soma[T](x:T, y; T) -> T:
+    return x+y"""
 ####
 
 """def simulacaodejuros(
@@ -23,6 +23,7 @@ sorted(verbos)
 
 sorted(verbos, key=lambda x: x[-2:])
 ['saber', 'amar', 'comer']"""
+
 ###
 
 """path_1=extract_audio( 'video_1.mp4', 'result 1.wav', eq=False)
@@ -87,7 +88,7 @@ resultado=soma(10)"""
     return acumulador"""
 ###
 
-#para se criar variantes evitar usar maiusculas e NAO USAR espaços nem começar com numeros ou caracteres especiais
+#Para se criar variantes deve-se evitar usar maiusculas e NÃO USAR espaços nem começar com numeros ou caracteres especiais;
 
 ###
 #def enviar_email(remetente, destinatario, assunto, corpo):
@@ -101,25 +102,32 @@ resultado=soma(10)"""
 
 ###
 
-#funções sao subprogramas, o contribuidor zeca é um queriiiidooo
-#começa com o cabeçalho, o que ta dentro dele é o corpo
-"""existem dois tipos de subprogramas, lambda são programas e o corpo contem apenas uma expressão, procedimento não retorna mas função sim.
-"""
+"""Funções são chamadas diversas vezes de subprogramas;
+Começam com o cabeçalho, o que se encontra dentro dele é chamado de corpo;
+Existem dois tipos de subprogramas, as lambdas, que são programas  cujo corpo contem apenas uma expressão, e as demais que contém instruções maiores;
+Procedimentos não apresentam retorno, mas funções sim. """
+
+###
+
 """anonimo= lambda: x+1
 anonimo(1)
 "vai retornar 2"
+"""
+###
 
-anonimo=lambda x:10 if x<10 else x"""
-
+"""anonimo=lambda x:10 if x<10 else x
 "se for mnr que 10 retorna 10 se não retorna o numero"
+"""
 
-"""da pra concatenar lambda uma dentro da outra e NÃO TEM RETURN
-def cabe vaaaaarias linhas 
-#em teoria, se tem return é função, se não tem é procedimento, mas as vezes não já que tem os void (não tem retorno), em python sem return é void
-#em python tudo é sempre função, todo subprograma tem retorno, mesmo que seja vazio (ai retorna none)
-#no return vai dizer que a d=função nunca volta (notação maneira)
-#é possivel usar os lambda para provar a logica booleana
-#se chamar a função de fora vai receber a função de dentro
+###
+"""
+É possível concatenar uma lambda dentro de outra sem apresentar return;
+Def é a categoria de função que apresenta várias linhas;
+Em teoria, se tem return é função, se não tem é procedimento, mas as vezes isso não se aplica a realidade em razão dos voids;
+Voids não apresentam retorno, assim, em python 'no return' é void;
+Em python,tudo é sempre função, todo subprograma tem retorno, mesmo que seja vazio (none);
+É possivel usar os lambda para provar a logica booleana;
+Se chamada uma função de 'fora', irá ser devolvida uma função de 'dentro';
 #colocar os numeros juntos se as variaveis tão juntas
 #existem varivaies locais, livres, globais, etc...
 #python tem polimorfismo (usa decoradores) e despacho pra quem tava falando mal
