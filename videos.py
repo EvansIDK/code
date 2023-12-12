@@ -1,9 +1,12 @@
 #ANOTAÇÕES SOBRE OS VÍDEOS
 
-"""def soma[T](x:T, y; T) -> T:
-    return x+y"""
+#Testes dos códigos primeiro vídeo
+
+#def soma[T](x:T, y; T) -> T:
+    #return x+y
 ####
-def simulacaodejuros(
+
+"""def simulacaodejuros(
         valor: float, taxa: float, parcelas: int)-> str:
         template= "juros em {}x parcelas: {}. Valor final: {}."
 
@@ -12,6 +15,7 @@ def simulacaodejuros(
 
         return template.format(parcelas, juros, valor_final)"""
 ###
+
 """verbos = ['comer', 'amar', 'saber']
 
 sorted(verbos)
@@ -94,6 +98,7 @@ resultado=soma(10)"""
 #    with smtplib.SMTP_SSL(servidor, porta, contexto) as servidor:
 #        server.login(remetente, senha)
 #         server.sendemail(remetente, destinatario, mensagem)
+
 ###
 
 #funções sao subprogramas, o contribuidor zeca é um queriiiidooo
