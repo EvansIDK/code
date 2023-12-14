@@ -128,121 +128,116 @@ Voids não apresentam retorno, assim, em python 'no return' é void;
 Em python,tudo é sempre função, todo subprograma tem retorno, mesmo que seja vazio (none);
 É possivel usar os lambda para provar a logica booleana;
 Se chamada uma função de 'fora', irá ser devolvida uma função de 'dentro';
-#colocar os numeros juntos se as variaveis tão juntas
-#existem varivaies locais, livres, globais, etc...
-#python tem polimorfismo (usa decoradores) e despacho pra quem tava falando mal
-#livre é uma variavel que faz parte da closure
-#inner e closure (rever)
-#rever as corrotinas
-#tem corrotinas classicas e assincronas
-o yeld deixa o controle simetrico
-na corrotina faz uma pausa pro controle simetrico
-existem também os gerados que em python são corrotinas, mas tem quem discorde
-controle simetrico é a troca daquelas respostas ping pong
-geradores são criadores de dados
-da para juntar os geradores com o yeld e devolver valores
-computação simatrica da medo
-map é objeto gerador
-Da para usar o yield como expressao e como retorno
-yield from transforma subprograma em subgerador
-async=corrotina assincrona
-await delega a fun;'ao de uma corrotina para outra corrotina
+Em situações que as variáveis estão juntas, deve-se colocar os numeros juntos;
+Existem varivaies locais, livres, globais, etc...
+Python tem polimorfismo (usa decoradores) e despacho;
+Livre é uma variavel que faz parte da closure;
+Existem corrotinas classicas e assincronas;
+O yeld deixa o controle simetrico;
+Na corrotina é feita uma pausa para o controle simetrico;
+Existem também os gerados que em python são corrotinas, mas tem quem discorde;
+Controle simetrico é a troca de respostas ("ping pong");
+Geradores são criadores de dados;
+É possível juntar os geradores com o yeld e devolver valores;
+Map é objeto gerador;
+É possível usar o yield como expressao e como retorno;
+"yield from" transforma subprograma em subgerador;
+async=corrotina assincrona;
+await delega a função de uma corrotina para outra corrotina.
 """
 
-"""iteravel é todo objeto que pode ser percorrido, como no for em uma lista
-usa a função next para isso
-essa é a base para o for
-lazy evaluation atrasa o calculo até que o uso seja necessário (quando for solicitado)
+"""
+Iteravel é todo objeto que pode ser percorrido, como no "for" em uma lista;
+Usa a função next para isso;
+Essa é a base para a construção do for;
+Lazy evaluation atrasa o calculo até que o uso seja necessário (quando for solicitado).
 
-range não é iterador
-uma forma de criar a lazy é com os geradores
-da pra usar o lazy para criar um sequencia infitia
+Range não é iterador;
+Uma forma de criar a lazy é com os geradores;
+Pode-se usar o lazy para criar um sequencia infinita;
 (conexão entre os videos envolve os geradores)
-usa o lazy para grandes volumes de dados
-funções embutidas é [estranho] de usar
+Usa-se o lazy para grandes volumes de dados.
 
-zip é um exemplo de função embutida que serve para combinar listas alternando
-map também é função
-filter filtra [obvio]
-é confuso mas ainda que melhor que tentar criar essas coisas do zero
-assistir videos sobre decoradores
-o itertools fornece funções para criar iteradores para tarefas em loop (é escrito em C puro então é rápido)
+"zip" é um exemplo de função embutida que serve para combinar listas alternando;
+"map" também é função;
+"filter" filtra;
+o itertools fornece funções para criar iteradores para tarefas em loop (é escrito em C puro então é rápido).
 
-oferece o zip_longest(para zipar sequencias de tmanhos diferentes)
-startmap(desempacota)
-filterfalse(filter ao contrario)
-islice(add a função do slice aos iteradores)
+oferece o "zip_longest"(para zipar sequencias de tamanhos diferentes);
+"startmap"(desempacota);
+"filterfalse"(filter ao contrario);
+"islice"(add a função do slice aos iteradores).
 
-para usar o ziplongest, usa o fillvalue e define para seu usado
-para fazer a média vocÊ pode usar o filter para tirar o none 
-nan provavelmente é melhor
+Para usar o "ziplongest", usa o fillvalue e define o que será usado;
+Para fazer a média você pode usar o filter para tirar o "none";
+"nan" provavelmente é melhor.
 
-para o filterfalse ele te da o contrario do que pediu
+Para o filterfalse ele te fornece o contrario do que foi descrito.
 
-starmap faz seu trabalho através do desmontamento da sequência
-vai poupar linha e permiter usando map junto de zip sem problemas
-muito util em caso que os valores sejam tuplas
+"starma" faz seu trabalho através do desmontamento da sequência;
+Poupa linhas e permite usar map junto de zip sem problemas;
+Muito util em caso que os valores sejam tuplas.
 
-usando o islice é possivel tornar o gerador lazy e permitir "andar" nos numeros gerados
-não é possível usar o step nem numeros negativos
-PERA DA SIM PARA IR DD 2 EM 2 SÓ COLCOAR OS VALORES COMO NONE (ESTA NO MOMOENTO 1:05:20)
+Usando o ""islice é possivel tornar o gerador lazy e permitir "andar" nos numeros gerados;
+Não é possível usar numeros negativos;
+(1:05:20).
 
-TAMBÉM TEM O COUNT QUE CONTA
-c=count(0,pi)
+A função "count" conta;
+c=count(0,pi).
 
-também existe o cycle (1:14:05)
-da para fazer um semafaro
-ou um sistema que informa quem irá te atender ou mesmo para animações e música
+Existe o cycle (1:14:05);
+Pode ser utilizado para fazer um semafaro;
+Ou um sistema que informa quem irá te atender ou mesmo para animações e música;
+Ele divide em ciclos.
 
-repeat te manda de voltar o mesmo valor o numero de vezes que você mandar
-mas tem como deixar infinito
-melhor que o while true
-muito util para videogames
-tabém evita breaks desnecessários
+"repeat" te retorna o mesmo valor o numero de vezes que você solicitar;
+É possível deixar infinito;
+(melhor que o while true)
+Muito util para videogames;
+Evita breaks desnecessários.
 
-existem também os combinadores
 
-product (1:28:00)
-produz possiveis combinações, como quando é preciso citar as combinações de cores com tamanhos de camisetas
-(evita colocar for dentro de for)
-muito bom quando tem vários fatores para combinar
-ele concatena as coisas em uma tupla
+Existem também os combinadores:
 
-permutation (1:34:30)
-todas as combiações de determinados valores usando determinado numero de valores por combinação
-p=permutations('abcd',2)
-permutação -> AB != BA
+"product" (1:28:00)
+Produz possiveis combinações, como quando é preciso citar as combinações de cores com tamanhos de camisetas;
+(evita colocar for dentro de for);
+Muito bom quando tem vários fatores para combinar;
+Ele concatena as coisas em uma tupla.
 
-combinations
-na permutação tem repetição (a com b e b com a), já na combinação não
+"permutation" (1:34:30)
+Todas as combiações de determinados valores;
+Usando determinado numero de valores que devem aparecer por combinação;
+exemplo: p=permutations('abcd',2);
+permutação -> AB != BA.
 
-coombinations_with_replacement
-PESQUISA DEPOIS
+"combinations"
+Na permutação tem repetição (a com b e b com a), já na combinação não.
 
-existem funções que não podem ser infinitas
 
-acummulate cria uma progressão aritmetica
-da para usar para ver o balaço da conta bancária
+Existem funções que não podem ser infinitas.
 
-takewhile (1:51:50)
-filtro que itera
-dropwhile serve para ignorar
+"acummulate" cria uma progressão aritmetica;
+Pode ser utilizada para ver o balaço da conta bancária.
 
-existe também a diminuição de containers
+"takewhile" (1:51:50);
+Filtro que itera.
 
-chain: junta iteraveis em um unico iteravel (2:00:55)
-para quando crises iterar 2 geradores para criar uma coisa única
+"dropwhile" serve para ignorar o que for definido.
 
-compress (02:03:00)
-te permite agregar false e true á valores para decidir se eles devem ser levados em consideração ou não
+"Chain": junta iteraveis em um unico iteravel (2:00:55);
+Para quando precisar iterar 2 geradores para criar um unico item.
 
-groupby
-ordena por grupos tal qual no sql
-é possível usar um itemgetter a depender da situação
+"compress" (02:03:00);
+Permite agregar false e true á valores para decidir se eles devem ser levados em consideração ou não;
 
-tee repete os dados para que possam ser utilizados novamente
+"groupby";
+Ordena por grupos tal qual no sql;
+É possível usar um itemgetter a depender da situação.
 
-pairwise cria combinações mas só usa de 2 valores
+"tee" repete os dados para que possam ser utilizados novamente.
 
-existem outras bibliotecas como o moreitertools e o toolz
+"pairwise" cria combinações; mas só usa de 2 valores.
+
+Existem outras bibliotecas como o moreitertools e o toolz.
 """
